@@ -1,5 +1,5 @@
 import Creational.Builder.Computer;
-import Creational.Builder.Singleton.Singleton;
+import Creational.Singleton.Singleton;
 
 public class Main {
     public static void main(String[] args) {

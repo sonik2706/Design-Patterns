@@ -1,4 +1,4 @@
-package Singleton;
+package Creational.Builder.Singleton;
 
 public class Singleton {
 

@@ -1,4 +1,4 @@
-package Builder;
+package Creational.Builder;
 
 public class Computer {
     private String HDD;
@@ -27,6 +27,16 @@ public class Computer {
         this.RAM=builder.RAM;
         this.isGraphicsCardEnabled=builder.isGraphicsCardEnabled;
         this.isBluetoothEnabled=builder.isBluetoothEnabled;
+    }
+
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "HDD='" + HDD + '\'' +
+                ", RAM='" + RAM + '\'' +
+                ", isGraphicsCardEnabled=" + isGraphicsCardEnabled +
+                ", isBluetoothEnabled=" + isBluetoothEnabled +
+                '}';
     }
 
     public static class ComputerBuilder {

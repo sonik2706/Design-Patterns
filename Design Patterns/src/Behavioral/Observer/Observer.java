@@ -12,5 +12,13 @@ public class Observer implements IObserver{
 
     public Observer(Subject subject){
         this.subject = subject;
+        this.data = subject.getData();
+    }
+
+    @Override
+    public String toString() {
+        return "Observer{" +
+                "data=" + data +
+                '}';
     }
 }

@@ -7,6 +7,11 @@ public class Subject implements ISubject{
 
     int data;
     List<IObserver> observers = new LinkedList<IObserver>();
+
+    public Subject(int data){
+        this.data = data;
+    }
+
     @Override
     public void registerObserver(IObserver observer) {
         this.observers.add(observer);
@@ -30,5 +35,12 @@ public class Subject implements ISubject{
 
     public void setData(int data){
         this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return "Subject{" +
+                "data=" + data +
+                '}';
     }
 }

@@ -3,6 +3,7 @@ import Behavioral.Observer.Subject;
 import Behavioral.Strategy.BehaviorA;
 import Behavioral.Strategy.BehaviorB;
 import Behavioral.Strategy.Client;
+import Creational.AbstractFactory.*;
 import Creational.Builder.Computer;
 import Creational.Factory.ConcreteCreatorA;
 import Creational.Factory.ConcreteCreatorB;
@@ -81,6 +82,17 @@ public class Main {
             Creator creatorB = new ConcreteCreatorB();
             Product productB = creatorB.someOperation();
 
+        }
+
+        //Abstract Factory
+        {
+            System.out.println("Abstract Factory");
+            Factory factory = new ConcreteFactory1();
+            ProductA productA = factory.createProductA();
+            ProductB productB = factory.createProductB();
+
+            productA.run();
+            productB.run();
         }
     }
 }

@@ -1,3 +1,7 @@
+import Behavioral.Command.Invoker;
+import Behavioral.Command.LightOffCommand;
+import Behavioral.Command.LightOnCommand;
+import Behavioral.Command.Receiver;
 import Behavioral.Observer.Observer;
 import Behavioral.Observer.Subject;
 import Behavioral.Strategy.BehaviorA;
@@ -93,6 +97,19 @@ public class Main {
 
             productA.run();
             productB.run();
+        }
+
+        //Command Pattern
+        {
+            System.out.println("Command");
+            Receiver light = new Receiver();
+            Invoker remote = new Invoker(new LightOnCommand(light), new LightOffCommand(light));
+
+            light.getStatus();
+            remote.clickOn();
+            light.getStatus();
+            remote.clickOff();
+            light.getStatus();
         }
     }
 }
